@@ -8,9 +8,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    # - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
     - uses: julia-actions/setup-julia@v1
       with:
         version: ${{ inputs.JULIA_VERSION }}
-    - run: julia --color=yes ./script.jl
+    - run: julia script.jl
       shell: bash
