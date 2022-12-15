@@ -12,5 +12,5 @@ runs:
     - uses: julia-actions/setup-julia@v1
       with:
         version: ${{ inputs.JULIA_VERSION }}
-    - run: julia script.jl
+    - run: julia --project=@. script.jl
       shell: bash
