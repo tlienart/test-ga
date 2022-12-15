@@ -1,0 +1,15 @@
+name: "Run julia script"
+
+inputs:
+  JULIA_VERSION:
+    required: false
+    default: 1.8
+
+runs:
+  using: "composite"
+  steps:
+    - uses: julia-actions/setup-julia@v1
+      with:
+        version: ${{ inputs.JULIA_VERSION }}
+    - run: julia --color=yes -e script.jl
+      shell: bash
