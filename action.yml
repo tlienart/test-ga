@@ -11,5 +11,5 @@ runs:
     - uses: julia-actions/setup-julia@v1
       with:
         version: ${{ inputs.JULIA_VERSION }}
-    - run: julia --color=yes -e ./script.jl
+    - run: julia project=@. --color=yes script.jl
       shell: bash
