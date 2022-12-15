@@ -8,6 +8,7 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v3
     - uses: julia-actions/setup-julia@v1
       with:
         version: ${{ inputs.JULIA_VERSION }}
